@@ -1,0 +1,23 @@
+<%- include("partials/header"); -%>
+    <div>
+        <br>
+        <h1 style="font-family: 'Pacifico', cursive; text-align: center;">Welcome to blogger</h1>
+        <hr>
+    </div>
+    <div>
+        <h1 style="font-family: 'Pacifico', cursive;">Home</h1>
+        
+        <hr>
+        <% blogs.forEach(function(blog) { %>
+        
+            <div class="container">
+            <h3> <a onmouseover="this.style.color='darkgreen'" onmouseout="this.style.color='darkcyan'" style="color:darkcyan; text-decoration: none;" href="/posts/<%= blog._id %>"><%= blog.heading %></a> </h3> 
+            <p> <%= blog.content.slice(0,250) %> <a href="/posts/<%= blog._id %>">more...</a> </p>
+            </div>
+            <hr>
+        <% }) %>
+    </div>
+<%- include("partials/footer"); -%>
+
+
+

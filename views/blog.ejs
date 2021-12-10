@@ -1,0 +1,23 @@
+<%- include("partials/header"); -%>
+    <div>
+        <br>
+        <h1 style="font-family: 'Pacifico', cursive;">Blog</h1>
+        <hr>
+    </div>
+    <div>
+        <form action="/delete" method="POST">
+            <h3><%= blogs.heading %></h3>
+            <p><%= blogs.content %></p>
+            <br>
+            <br>
+            <button type="submit" name="itemToDelete" value="<%= blogs._id %>" 
+                class="btn btn-md btn-primary">Delete this Blog</button>
+            
+        </form>
+        
+        
+    </div>
+<%- include("partials/footer"); -%>
+
+
+
